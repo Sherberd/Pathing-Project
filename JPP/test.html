@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel ="stylesheet" href ="Pathing.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script>
+      var g = "error";
+      var goldValues = ["100", "105", "136", "85"]
+    function gv0(){
+       g = goldValues[0];
+    }
+    function gv1(){
+       g = goldValues[1];
+    }
+    function gv2(){
+       g = goldValues[2];
+    }
+    function gv3(){
+       g = goldValues[3];
+    }
+    function Display() {
+      var span = document.createElement('span');
+      span.style.fontSize = '200%';
+      var para = document.createElement("P");
+      para.innerHTML = g;
+      document.getElementById("gold").appendChild(para);
+}
+    </script>
+  </head>
+  <body>
+        <div class="row">
+           <div class="col-sm-9">
+             <div class="container">
+              <img src="League of Legends Minimap.jpg" alt="map" width="50%" height="70%">
+              <button onclick="gv1(); Display();"class="btnRed">Red</button>
+              <button onclick="gv3(); Display();"class="btnKrugs">Krugs</button>
+              <button onclick="gv2(); Display();"class="btnRap">Raptors</button>
+              <button onclick="gv4(); Display();"class="btnWolves">Wolves</button>
+              <button onclick="gv1(); Display();"class="btnBlue">Blue</button>
+              <button onclick="gv2(); Display();"class="btnGromp">Gromp</button>
+           </div>
+            </div>
+           <div class="col-sm-3">
+             <div id="gold">
+               <p id = val></p>
+             </div>
+          </div>
+      </div>
+  </body>
+</html>
